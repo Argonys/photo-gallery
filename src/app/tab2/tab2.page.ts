@@ -7,6 +7,10 @@ import { PhotoService } from "../services/photo.service";
     styleUrls: ["tab2.page.scss"],
 })
 export class Tab2Page {
+    ngOnInit() {
+        this.photoService.loadSaved();
+    }
+
     photos = this.photoService.photos;
 
     constructor(public photoService: PhotoService) {}
